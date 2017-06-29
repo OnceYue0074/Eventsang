@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="MyApp" >
+<div ng-hello-world></div>
+
+<script src="angular.js/angular.js"></script>
+<script>
+    //    2.创建模块
+    angular.module('MyApp',[])
+    //           3.创建一个自定义指令
+    //           directives('指令名'，回调函数)就是用来定义一个自定义指令的函数
+    //        注意回调函数的参数不能使用$scope
+            .directive('ngHelloWorld',['$location',function($location){
+//               4.在回调函数里面要有一个返回值，返回自定义指令的内容
+                return{
+//                    5.返回值是一个对象类型 里面可以设置很多属性
+                    template:'<h1>111111</h1>'
+                    restrict:'M',
+                    replace:true
+                }
+            }]);
+    //    5.返回值是一个对象类型 里面可以设置很多属性
+    //        a.template:'值'可以指定一些html代码
+    //        b.templateUrl:'值'可以指定一个html文件
+    //        c.restrict:'值'可以指定自定义指令的使用方式 A是属性 C类名 E元素标签
+    //                M注释 写几个字母就有几种方式 可以都写上
+    //        -restrict:设置指令的使用方式，取值：'E'/'C'/'M'/'A'，取值是区分大小写。
+    //    注释：<!--directive:ng-hello-world-->
+    //    (1)就可以代替掉页面ngelloworld页面
+
+    angular.module('MyApp',[])
+            .directive('ngHelloWo',['$location',function($location){
+                return{
+                    link:function(scope,element,attribute){
+                        element.on('click',function(){
+                            element.parent(),find('li').removeClass('active');
+                            this.addClass('active');
+                        })
+                    }
+                }
+            }]);
+
+    angular.module('Myapp',[])
+            .directive('ngHlAl'['$location',function($location){
+                return{
+                    link:function(scope,element,attribute){
+                        element.on('click',function(){
+                            element.parent(),find('li').removeClass('active');
+                            element.addClass('active');
+                        })
+                    }
+                }
+            }])
+</script>
+</body>
+</html>

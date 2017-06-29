@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+</head>
+<body ng-app="myApp" ng-controller="textController">
+<input type="text" ng-model='name'>
+<div ng-repeat="value in name track by $index">{{value}}</div>
+<div ng-switch="name">四条！</div>
+<script src="../angular.js/angular.js"></script>
+<script>
+//    angular.module('muApp',[])
+//            .controller('textController',['$scope',function($scope){
+//                $scope.name="name";
+//                var watch=$scope.$watch('name',function(newValue,oldValue){
+//                    if($scope.name.length<6){
+//                        console.log('长度小于6');
+//                    }
+//                })
+//            }])
+
+//    angular.module('myApp',[])
+//            .controller('textController'['$scope',function($scope){
+//                $scope.name="四条";
+//                $scope.array=[{
+//                    name:"私立",
+//                    age:23
+//                },{
+//                    name:'可以',
+//                    age:32
+//                },{
+//                    name:'好的'
+//                },{
+//
+//                }]
+//            }])
+
+
+</script>
+</body>
+</html>

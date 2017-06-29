@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//   function ajax(options){
+//       var type = options.type;
+//       var url = options.url;
+//       var data = options.data;
+//       var sucess = options.success;
+//       var xhr = new XMLHttpRequest();
+//       if(type = 'get'){
+//           url = url + '?' + data;
+//           data = null;
+//       }
+//       xhr.open(type.url);
+//       if(type='post'){
+//           xhr.setRequestHeader('');
+//       }
+//       xhr.send(data);
+//       xhr.onreadystatechange=function(){
+//
+//       }
+//   }
+//
+//   ajax({
+//       type:'get',
+//       url:'',
+//       data:'',
+//       success:function(){
+//
+//       }
+//   })
+
+$('input').on('click',function(){
+    $.ajax({
+        type:'get',
+        url:'',
+        data:null,
+        success:function(data){
+
+        }
+    })
+})
+
+    $('input').on('click',function(){
+        $.ajajx({
+            type:'get',
+            url:'',
+            data:'JSON.parse()',
+            success:function(){
+
+            }
+        })
+    })
+
+$.('input').on('click',function(){
+    $.ajax({
+        type:'post',
+        url:'',
+        data:null,
+        timeout:1000,
+        success:function(){
+
+        }
+        error:function(){
+
+        }
+        complate:function(){
+
+        }
+    })
+})
+
+</script>
+</body>
+</html>

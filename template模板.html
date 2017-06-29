@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div></div>
+    <script type="text/tmpl" id="tmpl">
+        <h1><%=title%></h1>
+        <ul>
+            for(var i = 0; i<list.length;i++){%>
+            <li><%=list[i]%></li>
+            %}%
+        </ul>
+    </script>
+    <script src="js/template-native.js"></script>
+    <script>
+        var data={
+            title:'标签',
+            list:['一个','二个']
+        };
+        var thml = template('tmpl',data);
+        console.log(html);
+
+    </script>
+</body>
+</html>
